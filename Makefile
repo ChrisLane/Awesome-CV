@@ -1,6 +1,6 @@
 .PHONY: all
 
-CC = latexmk
+CC = latexmk -pdfxe
 BUILD_DIR = _build
 CV_DIR = cv
 CV_TEX_DIR = $(CV_DIR)/tex
