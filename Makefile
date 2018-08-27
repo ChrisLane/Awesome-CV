@@ -1,7 +1,7 @@
 .PHONY: all
 
 CC = latexmk
-BUILD_DIR = build
+BUILD_DIR = _build
 CV_DIR = cv
 CV_TEX_DIR = $(CV_DIR)/tex
 CV_SRCS = $(shell find $(CV_TEX_DIR) -name '*.tex')

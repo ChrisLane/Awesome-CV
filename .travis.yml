@@ -1,0 +1,14 @@
+before_install:
+- sudo apt-get update
+- sudo apt-get install texlive-latex-extra
+script:
+- make
+branch: master
+deploy:
+  provider: releases
+  api_key:
+    secure: Wqlxlf8ZEz5L3mB3Xr3yq5aROVRbzGT3Rt+iHgcluiPLPsMvhuDlWzx1RmWbcCsxe2ZERzrnCGYOyTM/BPa7dV74xVVwmeymH1bJfNXlTF4Oso+55l/9uXhKX5gxYsMjZFUXd9ahELAfLRrMsvb5HDgcZSFaEVleQnYBnzd6TVu1koo8h/Z5j+iAMP5Lguh6Ib7ENkD4MHa/dextxaODxHnzHckc1jUATQprtjF8lRVPbfA410x4vx1/FrftwZ8P/OdjpEA+jkvvx/vSjx7Pkf6gNcKsSSY5byCFxiqQgI4eQBsSSP5wTpAn3Y3iTDP6rzsRcC2Kjy/psWMaz69cZn0FY4153bBM25roCfrlCxz8ePf8inHKktrf5x/NmhjPd8xSkKk1/e1rqvDDCABFuS4+p2TqKOLnvSxab97dxOcIgPMubq1rasmjYSnyvsr76KPKWB7vGGPEDY1OpqtbLjxFX96iBSsH+c5yiGTlGZBkDvqUYjHYzBsI3guQKXZCt+EUbLgln/vJifpMLVi1+RxyUtrzFqmtv9lkq3Qx3LVy6yX44jgR1MQI9bX/egD8zSywOHylR8b00zmxXitwe7nuWkpAFn1l/Sv6pqY743Gt2ABMvnWbiWiQ7s1HCHROt7LwhVP0h74NNTt72/uccWsEZCwmNOTMjx1h36WdsAk=
+  file: cv.pdf
+  skip_cleanup: true
+  on:
+    repo: ChrisLane/cv
