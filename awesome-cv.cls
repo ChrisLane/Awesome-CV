@@ -82,6 +82,8 @@
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
+% Needed for many items per line
+\RequirePackage{multicol}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
 \hypersetup{%
@@ -656,6 +658,21 @@
   \end{itemize}
   \end{justify}
   \vspace{-4.0mm}
+}
+
+% Define an environment for cvmitems(for cventry)
+\newenvironment{cvmitems}{%
+  \vspace{-8.0mm}
+  \begin{justify}
+  \begin{multicols}{2}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{multicols}
+  \end{justify}
+  \vspace{-8.0mm}
 }
 
 
