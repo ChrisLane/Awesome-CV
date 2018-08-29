@@ -84,6 +84,8 @@
 \RequirePackage{parskip}
 % Needed for many items per line
 \RequirePackage{multicol}
+% Needed to change date format
+\RequirePackage[nodayofweek]{datetime}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
 \hypersetup{%
